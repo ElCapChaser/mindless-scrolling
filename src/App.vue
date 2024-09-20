@@ -1,10 +1,16 @@
 <template>
-  <label for="platform-select"></label>
-  <select name="platform-select" id="platform-select" v-model="selected">
-    <option value="youtube">Youtube</option>
-    <option value="linkedin">Linkedin</option>
-  </select>
-  <SearchBar  @keyUp="onKeyUp"/>
+  <div class="section is-large is-flex is-align-items-center is-justify-content-center">
+      <div class="select" >
+        <label for="platform-select"></label>
+        <select name="platform-select" id="platform-select" v-model="selected">
+          <option value="youtube">Youtube</option>
+          <option value="linkedin">Linkedin</option>
+        </select>
+      </div>
+      <div>
+        <SearchBar  @keyUp="onKeyUp"/>
+      </div>
+  </div>
 </template>
 
 <script>
@@ -36,12 +42,5 @@ export default {
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+@import "~bulma/css/bulma.css"
 </style>
