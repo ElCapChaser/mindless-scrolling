@@ -11,16 +11,19 @@
         <SearchBar  @keyUp="onKeyUp"/>
       </div>
   </div>
+  <BuyMeACoffee></BuyMeACoffee>
 </template>
 
 <script>
 import { ref } from 'vue'
 import SearchBar from './components/SearchBar.vue'
+import BuyMeACoffee from './components/BuyMeACoffee.vue'
 
 export default {
   name: 'App',
   components: {
-    SearchBar
+    SearchBar,
+    BuyMeACoffee
   },
   setup() {
     const selected = ref("default")
