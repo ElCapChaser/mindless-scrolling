@@ -1,23 +1,30 @@
 <template>
-    <label for="search-input"></label>
-    <input class="input" type="text" id="search-input" placeholder="Searching for" name="search-input" v-model="name" v-on:keyup.enter="() => $emit('key-up', name)">
+  <label for="search-input"></label>
+  <input
+    class="input"
+    type="text"
+    id="search-input"
+    placeholder="Searching for"
+    name="search-input"
+    v-model="name"
+    v-on:keyup.enter="() => $emit('key-up', name)"
+  />
 </template>
 
 <script>
-import { ref } from 'vue'
+import { ref } from "vue";
 
 export default {
-  name: 'HelloWorld',
+  name: "HelloWorld",
   emits: ["key-up"],
   setup() {
-    const name = ref("")
+    const name = ref("");
 
     return {
-      name
-    }
+      name,
+    };
   },
-}
+};
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>
