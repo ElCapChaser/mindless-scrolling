@@ -47,5 +47,5 @@ export default {
 </script>
 
 <style>
-@import "~bulma/css/bulma.css";
+@import 'bulma/css/bulma.css';
 </style>
