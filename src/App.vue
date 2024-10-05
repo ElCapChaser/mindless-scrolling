@@ -2,7 +2,7 @@
   <section
   class="center-screen"
   >
-    <div class="container">
+    <div class="container is-max-desktop">
         <div class="is-flex" >
           <PlatformSelect @selected="handleSelected"></PlatformSelect>
           <SearchBar @keyUp="onKeyUp" />
