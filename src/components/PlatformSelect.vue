@@ -10,14 +10,20 @@
 <script>
   import { ref } from "vue";
   import Platforms from "./../enums/Platforms.js"
-  
+  import URLSearchParamsHandler from "./../composables/URLSearchParamsHandler"
+
   export default {
     setup(props, {emit}) {
-
-      const selected = ref("default");
+      const preSelected = URLSearchParamsHandler(Platforms.QueryParams.platform);
+      const selected = ref(preSelected || "default");
       const options = Platforms.PlatformsEnum;
       const handleSelect = () => {
         emit("selected", selected.value)
+      }
+
+      // Emit the value immediately if a preselect exists.
+      if (preSelected) {
+        handleSelect()
       }
       return {
         selected,
