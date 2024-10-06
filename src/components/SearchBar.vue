@@ -4,6 +4,7 @@
     class="input"
     type="text"
     id="search-input"
+    autofocus
     placeholder="Searching for"
     name="search-input"
     v-model="name"
