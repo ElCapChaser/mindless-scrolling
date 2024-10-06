@@ -16,7 +16,6 @@
 import { ref } from "vue";
 
 export default {
-  name: "HelloWorld",
   emits: ["key-up"],
   setup() {
     const name = ref("");
